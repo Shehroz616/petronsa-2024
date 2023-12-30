@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Petronas</title>
+</head>
+
+<body>
+    <header class="trans-header">
+        <img src="img/petronas-logo.svg" class="petronas-logo" alt="">
+        <div class="right-btns">
+            <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+        </div>
+    </header>
+    <main>
+        <img src="img/mbr-landing-bg.png" class="w-100" alt="">
+        <img src="img/Register_sign.png" class="register-img" data-bs-toggle="modal" data-bs-target="#registerModal" alt="">
+        <img src="img/Login_sign.png" class="login-img" data-bs-toggle="modal" data-bs-target="#loginModal" alt="">
+
+   
+
+        <div class="modal fade custom-modal" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body">
+                        <h2 class="modal-heading">Register</h2>
+                        <form action="">
+                            <div class="mb-3">
+                                <input type="text" placeholder="Name" class="custom-input">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" placeholder="Email" class="custom-input">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" placeholder="Phone Number" class="custom-input">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" placeholder="Company / Institute" class="custom-input">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" placeholder="Designation" class="custom-input">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" placeholder="Country" class="custom-input">
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" placeholder="Password" class="custom-input">
+                            </div>
+                            <div class="mb-3">
+                                <label class="check-container">I have read and agree to the  <a href="">Terms & Conditions</a>
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="mb-3">
+                                <button class="submit-btn">Submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade custom-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body">
+                        <h2 class="modal-heading">Login</h2>
+                        <form action="">
+                            <div class="mb-3">
+                                <input type="email" placeholder="Email" class="custom-input">
+                            </div>
+                           
+                            <div class="mb-3">
+                                <input type="password" placeholder="Password" class="custom-input">
+                            </div>
+                            <div class="mb-3 text-start">
+                                <a href="" class="forget-link">Forgot password? Click here to reset.</a>
+                            </div>
+                            <div class="mb-3">
+                                <button class="submit-btn">Submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade custom-modal" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body">
+                        <h2 class="modal-heading">Contact Us</h2>
+                        <hr class="custom-hr">
+                        <p>
+                            For technical assistance on this website, please email us at:
+                        </p>
+                        <a class="contact-link" href="mailto:info@petronasmbr.com">info@petronasmbr.com</a>
+                        <hr class="custom-hr">
+                        <p>For more information or questions on MBR 2024 opportunities, please email us at:</p>
+                        <a class="contact-link" href="mbr-query@petronas.com">mbr-query@petronas.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

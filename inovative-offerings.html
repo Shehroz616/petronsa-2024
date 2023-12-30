@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Petronas</title>
+</head>
+
+<body>
+    <header class="menu-header">
+        <img src="img/petronas-logo-2.svg" class="petronas-logo" alt="petronas logo">
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="opportunities-on-offer.html">Opportunities on Offer</a></li>
+            <li><a href="walk-of-fame.html">Walk of Fame</a></li>
+            <li><a href="pac-showcase.html">PAC Showcase</a></li>
+            <li><a href="auditorium.html">Auditorium</a></li>
+            <li><a href="webinars.html">Webinars</a></li>
+            <li><a href="petronas-myprodata.html"><img src="img/PETRONAS-myPROdata-2.svg" alt="PETRONAS myPROdata"></a>
+            </li>
+            <li><a href="webinars.html">Webinars</a></li>
+            <li><a href="mbr-online-portal.html">MBR Online Portal</a></li>
+            <li><a href="mbr-information-counter.html">MBR Information Counter</a></li>
+        </ul>
+        <div class="right-btns">
+            <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+        </div>
+    </header>
+    <main>
+        <img src="img/enviroment-bg-2.png" class="w-100" alt="">
+
+        <ul class="nav nav-tabs" id="inovativeProperties" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="exploration-tab" data-bs-toggle="tab" data-bs-target="#exploration-tab-pane"
+                    type="button" role="tab" aria-controls="exploration-tab-pane" aria-selected="true"><img src="img/exploration-btn.svg" class="img-fluid" alt="exploration text"></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="dro-tab" data-bs-toggle="tab" data-bs-target="#dro-tab-pane"
+                    type="button" role="tab" aria-controls="dro-tab-pane" aria-selected="false"><img src="img/DRO-btn.svg" class="img-fluid"  alt="Discoverd Resource Opportunities (DRO)"></button>
+            </li>
+        </ul>
+        <div class="tab-content" id="inovativePropertiesContent">
+            <div class="tab-pane fade show active" id="exploration-tab-pane" role="tabpanel" aria-labelledby="exploration-tab"
+                tabindex="0"><img src="img/exploration.png" class="img-fluid"  alt="Exploration Details"></div>
+            <div class="tab-pane fade" id="dro-tab-pane" role="tabpanel" aria-labelledby="dro-tab" tabindex="0"><img src="img/dro.png" class="img-fluid" alt="Discoverd Resource Opportunities (DRO) Details"></div>
+        </div>
+
+        <a href="opportunities-on-offer.html">
+            <img src="img/opportunities-arrow-sign.png" class="innovative-arrow-sign" alt="innovative arrow sign">
+        </a>
+    </main>
+
+    <div class="modal fade custom-modal" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <h2 class="modal-heading">Contact Us</h2>
+                    <hr class="custom-hr">
+                    <p>
+                        For technical assistance on this website, please email us at:
+                    </p>
+                    <a class="contact-link" href="mailto:info@petronasmbr.com">info@petronasmbr.com</a>
+                    <hr class="custom-hr">
+                    <p>For more information or questions on MBR 2024 opportunities, please email us at:</p>
+                    <a class="contact-link" href="mbr-query@petronas.com">mbr-query@petronas.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
