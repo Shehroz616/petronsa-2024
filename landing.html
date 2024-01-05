@@ -17,9 +17,14 @@
         </div>
     </header>
     <main>
-        <img src="img/mbr-landing-bg.png" class="w-100" alt="">
-        <img src="img/Register_sign.png" class="register-img" data-bs-toggle="modal" data-bs-target="#registerModal" alt="">
-        <img src="img/Login_sign.png" class="login-img" data-bs-toggle="modal" data-bs-target="#loginModal" alt="">
+        <img src="img/mbr-landing-bg.png" class="w-100 d-none d-lg-block" alt="">
+        <img src="img/mbr-landing-bg-mobile.png" class="w-100 d-lg-none" alt="">
+        <img src="img/Register_sign.png" class="register-img d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#registerModal" alt="">
+        <img src="img/Login_sign.png" class="login-img d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#loginModal" alt="">
+        <div class="landing-btns">
+            <button data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+            <button data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+        </div>
 
    
 
@@ -50,6 +55,9 @@
                             </div>
                             <div class="mb-3">
                                 <input type="password" placeholder="Password" class="custom-input">
+                                <div class="text-start">
+                                    <span class="password-info">Password must be minimum 8 characters</span>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label class="check-container">I have read and agree to the  <a href="">Terms & Conditions</a>

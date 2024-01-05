@@ -35,7 +35,7 @@
             <hr>
             <div class="show-case-imgs">
                 <div></div>
-                <div><img src="img/brands/bee.png" class="img-fluid" alt="BEE"></div>
+                <div><img src="img/brands/bee.png" data-text="Lorem" class="img-fluid" alt="BEE"></div>
                 <div><img src="img/brands/conocophillips.png" class="img-fluid" alt="Conocophillips"></div>
                 <div><img src="img/brands/dialog.png" class="img-fluid" alt="Dialog"></div>
                 <div><img src="img/brands/des-diamond.png" class="img-fluid" alt="(DES) Diamond Energy Sarawak"></div>
@@ -103,11 +103,12 @@
     <div class="modal fade" id="logosModal" tabindex="-1" aria-labelledby="logosModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
-                <div class="modal-body p-5">
+                <div class="modal-body">
+                    <img src="img/logos-popup-bg.png" class="logos-popup-bg" alt="">
                     <div class="logo-bg">
-                        <img src="img/brands/bee.png" class="w-100" alt="">
+                        <img src="img/brands/bee.png" class="popup-logo" alt="">
                     </div>
-                    <p class="mt-4 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, adipisci quia. Optio veritatis incidunt rem atque debitis voluptates, quod corporis laborum vitae. Ratione ab eligendi veritatis deserunt perferendis ipsa? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam maxime necessitatibus est eius? Numquam voluptatibus quo reiciendis accusantium cumque accusamus enim consequatur sit eum. Iure nostrum id iste ipsam.</p>
+                    <p class="mt-4 text-white mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, adipisci quia. Optio veritatis incidunt rem atque debitis voluptates, quod corporis laborum vitae. Ratione ab eligendi veritatis deserunt perferendis ipsa? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam maxime necessitatibus est eius? Numquam voluptatibus quo reiciendis accusantium cumque accusamus enim consequatur sit eum. Iure nostrum id iste ipsam.</p>
                 </div>
             </div>
         </div>
@@ -118,14 +119,16 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             let logos = document.querySelectorAll(".show-case-imgs img");
-
             logos.forEach(logo => {
                 logo.addEventListener("click", () => {
+                    let popupLogo = document.querySelector(".popup-logo")
+                    popupLogo.src = logo.src
                     var myModal = new bootstrap.Modal(document.getElementById('logosModal'));
                     myModal.show();
                 });
             });
         });
+
 
     </script>
 </body>

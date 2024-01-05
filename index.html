@@ -16,18 +16,24 @@
         </div>
     </header>
     <main>
-        <img src="img/home-bg.png" class="w-100" alt="">
+        <img src="img/home-bg.png" class="w-100 d-none d-lg-block" alt="">
+        <img src="img/home-bg-mobile.png" class="w-100 d-lg-none" alt="">
+        <img src="img/pet50-logo.png" class="d-lg-none pet50-logo" alt="">
         <ul class="menu-links">
             <li><a href="walk-of-fame.html">Walk of<br>Fame</a></li>
             <li><a href="opportunities-on-offer.html">Opportunities<br>on Offer</a></li>
             <li><a href="pac-showcase.html">PAC<br>Showcase</a></li>
             <li><a href="auditorium.html">Auditorium</a></li>
-            <li><a href="">Webinars</a></li>
+            <li><a href="webinars.html">Webinars</a></li>
             <li><a href=""><img src="img/PETRONAS-myPROdata.svg" class="w-100" alt=""></a></li>
-            <li><a href="mbr-information-counter.html">MBR Information <br> Counter</a></li>
+            <li><a href="mbr-information-counter.html">MBR <br> Information <br> Counter</a></li>
             <li><a href="">MBR Online <br>  Portal</a></li>
         </ul>
     </main>
+    <div class="center-btns mt-4">
+        <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+        <button>Log Out</button>
+    </div>
 
     <div class="modal fade custom-modal" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -47,5 +53,10 @@
             </div>
         </div>
     </div>
+    
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>

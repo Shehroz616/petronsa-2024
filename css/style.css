@@ -16,7 +16,10 @@
 * {
     font-family: 'museo-sans';
 }
-
+body{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 68.83%, rgba(255, 255, 255, 0.20) 100%), #00A19C;
+    min-height: 100vh;
+}
 .trans-header {
     position: absolute;
     top: 0;
@@ -76,7 +79,7 @@ main {
 
 .custom-modal .modal-body {
     border: 3px solid #00FFF7;
-    background: radial-gradient(170.37% 126.3% at 50% -26.3%, rgba(32, 65, 154, 0.00) 0%, #20419A 78.14%, #00A19C 100%);
+    background: linear-gradient(180deg, #FDB924 0%, #00A19C 100%);
     border-radius: 0;
     text-align: center;
     padding: 45px 72px;
@@ -107,30 +110,30 @@ main {
     padding: 5px 10px;
     border: none;
     outline: none;
-    background: rgba(0, 255, 247, 0.50);
+    background: rgba(255, 255, 255, 0.80);
     text-align: center;
-    color: white;
+    color: #00A19C;
     font-family: 'museo-sans-light';
     font-size: 18px;
 }
 
 .custom-input:hover,
 .custom-input:focus {
-    outline: 2px solid white;
+    outline: 2px solid #00A19C;
 }
 
 .custom-input::placeholder {
-    color: white;
+    color: #00A19C;
     opacity: 1;
 }
 
 .custom-input:-moz-placeholder {
-    color: white;
+    color: #00A19C;
     opacity: 1;
 }
 
 .custom-input::-moz-placeholder {
-    color: white;
+    color: #00A19C;
     opacity: 1;
 }
 
@@ -175,7 +178,7 @@ main {
 }
 
 .check-container input:checked~.checkmark {
-    background-color: #20419A;
+    background-color: #00A19C;
 }
 
 .checkmark:after {
@@ -210,8 +213,8 @@ main {
 }
 
 .submit-btn:hover {
-    background-color: #20419A;
-    border-color: #20419A;
+    background-color: #00A19C;
+    border-color: #00A19C;
     font-family: "museo-sans-bold";
 }
 
@@ -245,7 +248,7 @@ main {
     position: absolute;
     color: #FFF;
     /* text-shadow: -3px 3px 3.9px rgba(0, 0, 0, 0.75), 0px 0px 16px rgba(255, 232, 150, 0.50); */
-    filter: drop-shadow(-3px 3px 3.9px rgba(0, 0, 0, 0.75)) drop-shadow(0px 0px 16px rgba(255, 232, 150, 0.50));
+    filter: drop-shadow(-3px 3px 3.9px rgba(0, 0, 0, 0.75)) drop-shadow(0px 0px 16px rgba(0, 255, 242, 0.75));
     text-align: center;
     font-size: 1.98vw;
     text-decoration: none;
@@ -281,12 +284,12 @@ main {
     top: 67%;
     left: 26%;
     width: 11.57%;
-    filter: drop-shadow(-3px 3px 3.9px rgba(0, 0, 0, 0.75)) drop-shadow(0px 0px 16px rgba(255, 232, 150, 0.50));
+    filter: drop-shadow(-3px 3px 3.9px rgba(0, 0, 0, 0.75)) drop-shadow(0px 0px 16px rgba(0, 255, 242, 0.75));
 }
 
 .menu-links li:nth-child(7) a {
-    top: 68%;
-    left: 43.3%;
+    top: 69%;
+    left: 45.3%;
     font-size: 1.72vw;
 }
 
@@ -589,17 +592,32 @@ main {
 
 #logosModal .modal-content {
     background: transparent;
+    border: none;
 }
 
 #logosModal .modal-body {
-    background: url(../img/logos-popup-bg.png);
-    background-size: cover;
+    position: relative;
+    padding: 5rem 3rem;
+}
+.logos-popup-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .logo-bg {
-    width: 50%;
+    width: max-content;
     background-color: white;
-    padding: 15px;
+    padding: 25px;
+    max-width: 100%;
+}
+
+.logo-bg img{
+    height: 150px;
+    max-width: 100%;
 }
 
 .info-btns button {
@@ -797,4 +815,221 @@ main {
     padding-right: 5px;
     border-right: 3px solid white;
     margin-right: 5px;
+}
+.mbrs-container{
+    position: absolute;
+    width: 42%;
+    height: 68%;
+    top: 11%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 63, 61, 0.80);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+}
+.mbrs-container .scroll-content{
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-color: #fff rgba(255, 255, 255, 0.25);
+    scrollbar-width: thin;
+    margin-right: -15px;
+    padding-right: 15px;
+}
+.mbrs-container .scroll-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.mbrs-container .scroll-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+}
+
+.mbrs-container .scroll-content::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5px;
+    
+}
+#mbr-tabs{
+    padding-bottom: 15px;
+    flex-wrap: nowrap;
+    border-width: 2px;
+}
+#mbr-tabs.nav-tabs .nav-item .nav-link{
+    border-radius: 0;
+    padding: 0;
+    border-width: 2px;
+    margin: 0 5px;
+}
+#mbr-tabs.nav-tabs .nav-item.show .nav-link,
+#mbr-tabs.nav-tabs .nav-link.active{
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 0;
+}
+#mbrTabContent{
+    padding-top: 15px;
+}
+#mbrTabContent h5{
+    color: white;
+    font-size: calc(1vw + 1px);
+}
+#mbrTabContent p{
+    color: white;
+    font-size: calc(0.9vw + 1px);
+    font-family: 'museo-sans-light';
+}
+#mbrTabContent h6{
+    color: white;
+    font-size: calc(0.9vw + 1px);
+    font-family: 'museo-sans-light';   
+}
+#mbrTabContent h6 button{
+    color: white;
+    font-size: calc(0.9vw + 1px);
+    font-family: 'museo-sans-light';
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+}
+.webinar-container{
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+}
+.password-info{
+    color: white;
+    font-size: 14px;
+    font-family: 'museo-sans-light';
+}
+.launching-container{
+    position: absolute;
+    width: 50%;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.launching-container h1{
+    color: #FDB924;
+    font-size: 4vw;
+    margin-bottom: 50px;
+    font-family: 'museo-sans-bold';
+}
+.launching-container img{
+    width: 45.53%;
+}
+.launching-container h4{
+    color: white;
+    font-size: 3.66vw;
+    margin: 35px 0;
+}
+.launching-container p{
+    color: white;
+    font-size: 1.3vw;
+}
+.landing-btns{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.landing-btns button{
+    border: 2px solid #00FFF7;
+    background: linear-gradient(180deg, #FDB924 0%, #00A19C 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px 30px;
+    color: white;
+    font-family: 'museo-sans-bold';
+    font-size: calc(4vw + 8px);
+    margin: 0 10px;
+    line-height: 1.1;
+}
+.input-error{
+    text-align: left;
+    color: rgb(220,53,69);
+    font-size: 14px;
+}
+@media(max-width:991px){
+    .landing-btns{
+        display: flex;
+    }
+    .trans-header{
+        padding: 20px;
+    }
+    .petronas-logo{
+        width: 41px;
+    }
+    .custom-modal .modal-body{
+        padding: 20px 40px;
+    }
+    .menu-links a{
+        font-size: 4.2vw;
+    }
+    .menu-links li:nth-child(1) a {
+        top: 54.5%;
+        left: 11%;
+    }
+    .menu-links li:nth-child(2) a {
+        top: 52.5%;
+        left: 37%;
+    }
+    .menu-links li:nth-child(3) a {
+        top: 54.5%;
+        left: 71%;
+    }
+    .menu-links li:nth-child(4) a {
+        top: 63.5%;
+        left: 8%;
+    }
+    .menu-links li:nth-child(5) a {
+        top: 63.5%;
+        left: 71.3%;
+    }
+    .menu-links li:nth-child(6) a {
+        top: 67.5%;
+        left: 7%;
+        width: 23%;
+    }
+    .menu-links li:nth-child(7) a {
+        top: 69%;
+        left: 41%;
+        font-size: 3.26vw;
+    }
+    .menu-links li:nth-child(8) a {
+        top: 68%;
+        left: 63%;
+        font-size: 3.7vw;
+    }
+    .menu-links li:nth-child(8) a {
+        top: 68%;
+        left: 70%;
+        font-size: 3.7vw;
+    }
+    .trans-header{
+        display: none;
+    }
+    .pet50-logo{
+        position: absolute;
+        width: 45%;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .center-btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .center-btns button{
+        background: transparent;
+        border: none;
+        text-align: center;
+        color: white;
+        font-size: calc(2vw + 14px);
+        margin-bottom: 10px;
+    }
 }
