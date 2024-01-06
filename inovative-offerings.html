@@ -13,40 +13,52 @@
     <header class="menu-header">
         <img src="img/petronas-logo-2.svg" class="petronas-logo" alt="petronas logo">
         <ul class="menu-items">
+            <li><a id="menu-close"><img src="img/close-icon.svg" alt=""></a></li>
             <li><a href="index.html">Home</a></li>
             <li><a class="active" href="opportunities-on-offer.html">Opportunities on Offer</a></li>
             <li><a href="walk-of-fame.html">Walk of Fame</a></li>
             <li><a href="pac-showcase.html">PAC Showcase</a></li>
             <li><a href="auditorium.html">Auditorium</a></li>
             <li><a href="webinars.html">Webinars</a></li>
-            <li><a href="petronas-myprodata.html"><img src="img/PETRONAS-myPROdata-2.svg" alt="PETRONAS myPROdata"></a>
-            </li>
+            <li><a href="petronas-myprodata.html"><img src="img/PETRONAS-myPROdata-2.svg" alt="PETRONAS myPROdata"></a></li>
             <li><a href="webinars.html">Webinars</a></li>
             <li><a href="mbr-online-portal.html">MBR Online Portal</a></li>
             <li><a href="mbr-information-counter.html">MBR Information Counter</a></li>
+            <div class="right-btns-2 right-btns-mobile">
+                <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+                <button>Logout</button>
+            </div>
         </ul>
-        <div class="right-btns">
+        <div class="right-btns-2">
             <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
             <button>Logout</button>
         </div>
+        <button class="ham-btn"><img src="img/menu-icon.svg" alt=""></button>
     </header>
     <main>
-        <img src="img/enviroment-bg-2.png" class="w-100" alt="">
+        <img src="img/enviroment-bg-2.png" class="w-100 d-none d-lg-block" alt="">
+        <img src="img/enviroment-bg-2-mobile.png" class="w-100 d-lg-none" alt="">
 
         <ul class="nav nav-tabs" id="inovativeProperties" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="exploration-tab" data-bs-toggle="tab" data-bs-target="#exploration-tab-pane"
-                    type="button" role="tab" aria-controls="exploration-tab-pane" aria-selected="true"><img src="img/exploration-btn.svg" class="img-fluid" alt="exploration text"></button>
+                    type="button" role="tab" aria-controls="exploration-tab-pane" aria-selected="true"><img src="img/exploration-btn.svg" class="w-100" alt="exploration text"></button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="dro-tab" data-bs-toggle="tab" data-bs-target="#dro-tab-pane"
-                    type="button" role="tab" aria-controls="dro-tab-pane" aria-selected="false"><img src="img/DRO-btn.svg" class="img-fluid"  alt="Discoverd Resource Opportunities (DRO)"></button>
+                    type="button" role="tab" aria-controls="dro-tab-pane" aria-selected="false"><img src="img/DRO-btn.svg" class="w-100"  alt="Discoverd Resource Opportunities (DRO)"></button>
             </li>
         </ul>
         <div class="tab-content" id="inovativePropertiesContent">
             <div class="tab-pane fade show active" id="exploration-tab-pane" role="tabpanel" aria-labelledby="exploration-tab"
-                tabindex="0"><img src="img/exploration.png" class="img-fluid"  alt="Exploration Details"></div>
-            <div class="tab-pane fade" id="dro-tab-pane" role="tabpanel" aria-labelledby="dro-tab" tabindex="0"><img src="img/dro.png" class="img-fluid" alt="Discoverd Resource Opportunities (DRO) Details"></div>
+                tabindex="0">
+                <img src="img/exploration.png" class="w-100 d-none d-lg-block" alt="Exploration Details">
+                <img src="img/exploration-mobile.png" class="w-100 w-100 d-lg-none" alt="Exploration Details">
+            </div>
+            <div class="tab-pane fade" id="dro-tab-pane" role="tabpanel" aria-labelledby="dro-tab" tabindex="0">
+                <img src="img/dro.png" class="w-100 d-none d-lg-block" alt="Discoverd Resource Opportunities (DRO) Details">
+                <img src="img/dro-mobile.png" class="w-100 w-100 d-lg-none" alt="Discoverd Resource Opportunities (DRO) Details">
+            </div>
         </div>
 
         <a href="opportunities-on-offer.html">
@@ -75,6 +87,7 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 
 </html>

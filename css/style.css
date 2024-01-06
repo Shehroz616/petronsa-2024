@@ -951,6 +951,80 @@ main {
     color: rgb(220,53,69);
     font-size: 14px;
 }
+.center-btns{
+    display: none;
+}
+.menu-items li:first-child{
+    display: none;
+}
+.ham-btn{
+    display: none;
+}
+.right-btns-mobile{
+    display: none;
+}
+@media(max-width:1199px){
+    .menu-items{
+        position: fixed;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.60);
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px);
+        gap: 15px;
+        min-height: 100vh;
+        padding: 30px;
+        transform: translateX(100%);
+        transition: transform .3s ease;
+    }
+    .menu-items a{
+        font-size: clamp(16px, calc(2vw + 1px), 22px);
+    }
+    .menu-items a img{
+        width: 100%;
+    }
+    .menu-items li:first-child{
+        width: 100%;
+        text-align: end;
+        display: block;
+    }
+    .menu-items li:first-child a img{
+        width: 18px;
+    }
+    .right-btns-2{
+        display: none;
+    }
+    .right-btns-mobile{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        border-top: 2px solid white;
+        padding-top: 15px;
+    }
+    .right-btns-mobile button{
+        font-size: clamp(16px, calc(2vw + 1px), 22px);
+    }
+    .right-btns-2 button:first-child{
+        border: none;
+        margin: 0;
+    }
+    .ham-btn{
+        all: unset;
+        cursor: pointer;
+    }
+    .menu-header .petronas-logo{
+        width: 110px;
+    }
+    .menu-header{
+        padding: 16px;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: unset;
+    }
+}
 @media(max-width:991px){
     .landing-btns{
         display: flex;
@@ -1031,5 +1105,159 @@ main {
         color: white;
         font-size: calc(2vw + 14px);
         margin-bottom: 10px;
+    }
+    
+    .properties-name li a{
+        font-size: 4.2vw !important;
+        margin: 0% !important;
+    }
+    .properties-name{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        right: 50%;
+        top: 35%;
+        transform: translateX(50%);
+        gap: 15px;
+    }
+    .properties-name li a{
+        transform: unset !important;
+        font-family: 'museo-sans-bold';
+    }
+    .properties-name li:nth-child(1)::after{
+        all: unset;
+    }
+    .properties-name li:nth-child(2) a{
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        font-family: 'museo-sans-light';
+    }
+    .innovative-arrow-sign {
+        bottom: 23.5%;
+        left: 4%;
+        width: 40.5%;
+    }
+    #inovativeProperties{
+        right: 50%;
+        transform: translateX(50%);
+        width: 95%;
+    }
+    #inovativeProperties li:first-child{
+        width: 35%;
+        transform: translateY(10%);
+    }
+    #inovativeProperties li:last-child{
+        width: 65%;
+    }
+    #inovativeProperties.nav-tabs .nav-item .nav-link{
+        transform: unset !important;
+        width: 100%;
+    }
+    #inovativeProperties.nav-tabs .nav-link{
+        padding: 5px;
+    }
+    #inovativePropertiesContent{
+        right: 50%;
+        transform: translateX(50%);
+        width: 70%;
+    }
+    .info-btns button{
+        font-size: 5.35vw;
+    }
+    .info-btns .faq-btn{
+        left: 50%;
+        top: 36%;
+        transform: translateX(-50%);
+    }
+    .info-btns .contact-btn{
+        left: 50%;
+        top: 49%;
+        transform: translateX(-50%);
+    }
+    .popup-bg{
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transform: unset;
+        border-radius: 0;
+        clip-path: unset;
+        aspect-ratio: unset;
+    }
+    #faq-popup{
+        top: 8%;
+        width: 85%;
+        height: 80%;
+        padding: 15px;
+        padding-top: 35px;
+    }
+    .info-popups{
+        background: linear-gradient(180deg, rgba(0, 161, 156, 0.00) 0.4%, rgba(0, 161, 156, 0.20) 13.23%, rgba(0, 161, 156, 0.25) 49.48%, rgba(0, 161, 156, 0.20) 87.36%, rgba(0, 161, 156, 0.00) 100%);
+    }
+    .popup-header{
+        border-width: 2px;
+        margin-bottom: 20px;
+    }
+    .faq-body{
+        background: transparent;
+        padding-left: 0;
+    }
+    .popup-header h2{
+        font-size: 25px;
+    }
+    .popup-close{
+        width: 18px;
+    }
+    .question-box h5{
+        font-size: calc(1.38vw + 10px);
+    }
+    .question-box p{
+        font-size: calc(1vw + 9px);
+    }
+    .question-box{
+        border-width: 1px;
+        margin-bottom: 16px;
+    }
+    .info-btns .download-btn{
+        width: 80%;
+        font-size: 5.35vw;
+        top: 65%;
+    }
+    #contact-popup{
+        width: 85%;
+        padding: 15px;
+        top: 8%;
+        height: 50%;
+    }
+    .contact-body p{
+        font-size: calc(1vw + 11px);
+    }
+    .contact-body h6{
+        font-size: calc(2.1vw + 11px);
+        margin-bottom: 20px;
+    }
+    .email-btn{
+        font-size: calc(1vw + 11px);
+    }
+    .mbrs-container{
+        width: 90%;
+        height: 77%;
+        top: 10%;
+    }
+    #mbrTabContent p{
+        font-size: calc(1vw + 8px);
+    }
+    #mbrTabContent h5{
+        font-size: calc(1vw + 11px);
+    }
+    #mbrTabContent h6{
+        font-size: calc(1.5vw + 12px);
+    }
+    #mbrTabContent h6 button{
+        font-size: calc(1.5vw + 12px);
+    }
+    .mbrs-container{
+        padding: 15px;
+        padding-right: 20px;
     }
 }
