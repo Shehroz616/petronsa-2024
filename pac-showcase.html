@@ -28,21 +28,22 @@
         </div>
     </header>
     <main>
-        <img src="img/showcase-bg.png" class="w-100" alt="showcase background">
+        <img src="img/showcase-bg.png" class="w-100 d-lg-block d-none" alt="showcase background">
+        <img src="img/showcase-bg-mobile.png" class="w-100 d-lg-none" alt="showcase background">
         <img src="img/MBR2024-Logo.svg" class="mbr-log" alt="MBR 2024 Logo">
         <div class="showcase-container">
             <h2>PAC Showcase</h2>
             <hr>
             <div class="show-case-imgs">
-                <div></div>
+                <div class="d-none d-lg-block"></div>
                 <div><img src="img/brands/bee.png" data-text="Lorem" class="img-fluid" alt="BEE"></div>
                 <div><img src="img/brands/conocophillips.png" class="img-fluid" alt="Conocophillips"></div>
                 <div><img src="img/brands/dialog.png" class="img-fluid" alt="Dialog"></div>
                 <div><img src="img/brands/des-diamond.png" class="img-fluid" alt="(DES) Diamond Energy Sarawak"></div>
                 <div><img src="img/brands/dutamarine.png" class="img-fluid" alt="dutamarine"></div>
                 <div><img src="img/brands/en-quest.png" class="img-fluid" alt="EnQuest"></div>
-                <div style="grid-column-start: 8;grid-column-end: 10;"><img src="img/brands/exxonmobil.png" class="img-fluid" alt="Exxonmobil"></div>
-                <div></div>
+                <div class="custom-grid-2" style="grid-column-start: 8;grid-column-end: 10;"><img src="img/brands/exxonmobil.png" class="img-fluid" alt="Exxonmobil"></div>
+                <div class="d-none d-lg-block"></div>
                 <div><img src="img/brands/hess.png" class="img-fluid" alt="HESS"></div>
                 <div><img src="img/brands/hibiscus.png" class="img-fluid" alt="Hibiscus Petroleum"></div>
                 <div><img src="img/brands/inpex.png" class="img-fluid" alt="Inpex"></div>
@@ -51,7 +52,7 @@
                 <div><img src="img/brands/jadestone.png" class="img-fluid" alt="Jadestone Energy"></div>
                 <div><img src="img/brands/jx.png" class="img-fluid" alt="Jx"></div>
                 <div><img src="img/brands/kpoc.png" class="img-fluid" alt="KPOC"></div>
-                <div></div>
+                <div class="d-none d-lg-block"></div>
                 <div><img src="img/brands/roc.png" class="img-fluid" alt="ROC"></div>
                 <div><img src="img/brands/kufpec.png" class="img-fluid" alt="Kufpec"></div>
                 <div><img src="img/brands/long-boat-energy.png" class="img-fluid" alt="Long Boat Energy"></div>
@@ -68,11 +69,11 @@
                 <div><img src="img/brands/posco.png" class="img-fluid" alt="Posco International E&P Malaysia"></div>
                 <div><img src="img/brands/pttep.png" class="img-fluid" alt="PTTEP"></div>
                 <div><img src="img/brands/sk-earthon.png" class="img-fluid" alt="SK Earthon"></div>
-                <div></div>
+                <div class="d-none d-lg-block"></div>
                 <div><img src="img/brands/sumdp.png" class="img-fluid" alt="Skye UMDP Exploration Berhad"></div>
                 <div><img src="img/brands/topaz.png" class="img-fluid" alt="Topaz"></div>
                 <div><img src="img/brands/sapura.png" class="img-fluid" alt="Sapura"></div>
-                <div style="grid-column-start:5; grid-column-end:7;"><img src="img/brands/sapura-energy.png" class="img-fluid" alt="Sapura Energy"></div>
+                <div class="custom-grid" style="grid-column-start:5; grid-column-end:7;"><img src="img/brands/sapura-energy.png" class="img-fluid" alt="Sapura Energy"></div>
                 <div><img src="img/brands/shell.png" class="img-fluid" alt="Shell"></div>
                 <div><img src="img/brands/total-energy.png" class="img-fluid" alt="Pertamina"></div>
                 <div><img src="img/brands/vestigo.png" class="img-fluid" alt="Vestigo"></div>
@@ -108,13 +109,14 @@
                     <div class="logo-bg">
                         <img src="img/brands/bee.png" class="popup-logo" alt="">
                     </div>
-                    <p class="mt-4 text-white mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, adipisci quia. Optio veritatis incidunt rem atque debitis voluptates, quod corporis laborum vitae. Ratione ab eligendi veritatis deserunt perferendis ipsa? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam maxime necessitatibus est eius? Numquam voluptatibus quo reiciendis accusantium cumque accusamus enim consequatur sit eum. Iure nostrum id iste ipsam.</p>
+                    <p class="mt-4 text-white mb-0 text-center text-lg-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, adipisci quia. Optio veritatis incidunt rem atque debitis voluptates, quod corporis laborum vitae. Ratione ab eligendi veritatis deserunt perferendis ipsa? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam maxime necessitatibus est eius? Numquam voluptatibus quo reiciendis accusantium cumque accusamus enim consequatur sit eum. Iure nostrum id iste ipsam.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/menu.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -128,8 +130,6 @@
                 });
             });
         });
-
-
     </script>
 </body>
 </html>

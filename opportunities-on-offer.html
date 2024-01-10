@@ -37,16 +37,65 @@
         <img src="img/enviroment-bg.png" class="w-100 d-none d-lg-block" alt="">
         <img src="img/enviroment-bg-mobile.png" class="w-100 d-lg-none" alt="">
         <ul class="properties-name">
-            <li><a href="#">Overview of Malaysia</a></li>
-            <li><a href="#">Regional <br class="d-none d-lg-block"> Overview:</a></li>
-            <li><a href="#">Peninsular Malaysia</a></li>
-            <li><a href="#">Sarawak</a></li>
-            <li><a href="#">Sabah</a></li>
+            <li><a href="javascript:void(0)" data-slider-popup="#overview-of-malaysia-slider">Overview of Malaysia</a></li>
+            <li><a href="javascript:void(0)">Regional <br class="d-none d-lg-block"> Overview:</a></li>
+            <li><a href="javascript:void(0)" data-slider-popup="#peninsular-malaysia-slider">Peninsular Malaysia</a></li>
+            <li><a href="javascript:void(0)" data-slider-popup="#sarawak-slider">Sarawak</a></li>
+            <li><a href="javascript:void(0)" data-slider-popup="#sabah-slider">Sabah</a></li>
         </ul>
         <a href="inovative-offerings.html">
             <img src="img/innovative-arrow-sign.png" class="innovative-arrow-sign" alt="innovative arrow sign">
         </a>
     </main>
+
+
+    <div class="slider-popup" id="overview-of-malaysia-slider">
+        <button class="slider-close"><img src="img/close-icon.svg" class="w-100" alt=""></button>
+        <div class="custom-slider">
+            <img src="img/introduction.png" class="w-100" alt="">
+            <img src="img/slide-2.jpeg" class="w-100" alt="">
+        </div>
+        <div class="slider-controls">
+            <button class="left-btn"></button>
+            <div class="slide-count"><span class="counter">1</span>/<span class="total">2</span> </div>
+            <button class="right-btn"></button>
+        </div>
+        <a href="#" class="download-pdf">Download PDF</a>
+    </div>
+
+    <div class="slider-popup" id="peninsular-malaysia-slider">
+        <button class="slider-close"><img src="img/close-icon.svg" class="w-100" alt=""></button>
+        <div class="custom-slider">
+            <img src="img/introduction.png" class="w-100" alt="">
+            <img src="img/slide-2.jpeg" class="w-100" alt="">
+            <img src="img/introduction.png" class="w-100" alt="">
+        </div>
+        <div class="slider-controls">
+            <button class="left-btn"></button>
+            <div class="slide-count"><span class="counter">1</span>/<span class="total">2</span> </div>
+            <button class="right-btn"></button>
+        </div>
+        <a href="#" class="download-pdf">Download PDF</a>
+    </div>
+
+    <div class="slider-popup" id="sarawak-slider">
+        <button class="slider-close"><img src="img/close-icon.svg" class="w-100" alt=""></button>
+        <div class="custom-slider">
+            <img src="img/introduction.png" class="w-100" alt="">
+            <img src="img/slide-2.jpeg" class="w-100" alt="">
+            <img src="img/introduction.png" class="w-100" alt="">
+            <img src="img/slide-2.jpeg" class="w-100" alt="">
+        </div>
+        <div class="slider-controls">
+            <button class="left-btn"></button>
+            <div class="slide-count"><span class="counter">1</span>/<span class="total">2</span> </div>
+            <button class="right-btn"></button>
+        </div>
+        <a href="#" class="download-pdf">Download PDF</a>
+    </div>
+
+
+    <div class="custom-backdrop"></div>
 
     <div class="modal fade custom-modal" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -69,6 +118,80 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/menu.js"></script>
+
+    <script>
+        let leftBtn = document.querySelectorAll(".left-btn")
+        let rightBtn = document.querySelectorAll(".right-btn")
+        let customSlider = document.querySelectorAll(".custom-slider")
+        let sliderPopup = document.querySelectorAll(".slider-popup")
+        let propertiesName = document.querySelectorAll(".properties-name [data-slider-popup]")
+        let customBackdrop = document.querySelector(".custom-backdrop")
+        let sliderClose = document.querySelectorAll(".slider-close")
+        
+
+        propertiesName.forEach(name => {
+            name.addEventListener("click",()=>{
+                customBackdrop.style.visibility = "visible"
+                customBackdrop.style.opacity = "1"
+                let popupId = name.getAttribute("data-slider-popup")
+                document.querySelector(popupId).style.visibility = "visible"
+                document.querySelector(popupId).style.opacity = "1"
+            })
+        }); 
+
+        sliderClose.forEach(close => {
+            close.addEventListener("click",()=>{
+                customBackdrop.style.visibility = "hidden"
+                customBackdrop.style.opacity = "0"
+                sliderPopup.forEach(slider => {
+                    slider.style.visibility = "hidden"
+                    slider.style.opacity = "0"
+                });
+            })
+        });
+
+        let currSlide = 1
+        leftBtn.forEach(btn => {
+            btn.addEventListener("click",()=>{
+                currSlide--
+                btn.nextElementSibling.nextElementSibling.style.visibility = "visible"
+                let otherImgs = btn.parentElement.previousElementSibling.querySelectorAll("img")
+                otherImgs.forEach(img => {
+                    img.style.display = "none"
+                    img.style.opacity = "0"
+                });
+                btn.parentElement.previousElementSibling.children[currSlide - 1].style.display = "block"
+                btn.parentElement.previousElementSibling.children[currSlide - 1].style.opacity = "1"
+                btn.nextElementSibling.firstElementChild.innerHTML = currSlide
+                if (currSlide == 1) {
+                    btn.style.visibility = "hidden"
+                }
+                
+            })
+        });
+        rightBtn.forEach(btn => {
+            btn.addEventListener("click",()=>{
+                currSlide++
+                btn.previousElementSibling.previousElementSibling.style.visibility = "visible"
+                let slideCount = btn.parentElement.previousElementSibling.children.length
+                let otherImgs = btn.parentElement.previousElementSibling.querySelectorAll("img")
+                otherImgs.forEach(img => {
+                    img.style.display = "none"
+                    img.style.opacity = "0"
+                });
+                btn.parentElement.previousElementSibling.children[currSlide - 1].style.display = "block"
+                btn.parentElement.previousElementSibling.children[currSlide - 1].style.opacity = "1"
+                btn.previousElementSibling.firstElementChild.innerHTML = currSlide
+                if (slideCount == currSlide) {
+                    btn.style.visibility = "hidden"
+                }
+            })
+        });
+
+        customSlider.forEach(slider => {
+            slider.nextElementSibling.querySelector(".total").innerHTML = slider.children.length
+        });
+    </script>
 
 </body>
 </html>

@@ -11,29 +11,37 @@
     <header class="menu-header">
         <img src="img/petronas-logo-2.svg" class="petronas-logo" alt="petronas logo">
         <ul class="menu-items">
+            <li><a id="menu-close"><img src="img/close-icon.svg" alt=""></a></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="opportunities-on-offer.html">Opportunities on Offer</a></li>
-            <li><a class="active"  href="walk-of-fame.html">Walk of Fame</a></li>
+            <li><a href="walk-of-fame.html">Walk of Fame</a></li>
             <li><a href="pac-showcase.html">PAC Showcase</a></li>
-            <li><a href="auditorium.html">Auditorium</a></li>
+            <li><a class="active" href="auditorium.html">Auditorium</a></li>
             <li><a href="webinars.html">Webinars</a></li>
             <li><a href="petronas-myprodata.html"><img src="img/PETRONAS-myPROdata-2.svg" alt="PETRONAS myPROdata"></a></li>
             <li><a href="webinars.html">Webinars</a></li>
             <li><a href="mbr-online-portal.html">MBR Online Portal</a></li>
             <li><a href="mbr-information-counter.html">MBR Information Counter</a></li>
+            <div class="right-btns-2 right-btns-mobile">
+                <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+                <button>Logout</button>
+            </div>
         </ul>
-        <div class="right-btns">
+        <div class="right-btns-2">
             <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
             <button>Logout</button>
         </div>
+        <button class="ham-btn"><img src="img/menu-icon.svg" alt=""></button>
     </header>
     <main>
-        <img src="img/walk-of-fame-bg.png" class="w-100" alt="">
+        <img src="img/walk-of-fame-bg.png" class="w-100 d-none d-lg-block" alt="">
+        <img src="img/walk-of-fame-bg-mobile.png" class="w-100 d-lg-none" alt="">
         <div class="scroller">
             <img src="img/timeline-1.png" alt="">
             <img src="img/timeline-2.png" alt="">
         </div>
-        <img src="img/scroll-to-view-more.png" class="scroll-to-view-more" alt="scroll to view more">
+        <img src="img/scroll-to-view-more.png" class="scroll-to-view-more d-lg-block d-none" alt="scroll to view more">
+        <img src="img/scroll-to-view-more-mobile.png" class="scroll-to-view-more d-lg-none" alt="scroll to view more">
         
     </main>
 
@@ -57,6 +65,7 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/menu.js"></script>
 
     <script>
         const scrollableDiv = document.querySelector('.scroller');
@@ -68,7 +77,7 @@
         });
 
         scrollableDiv.style.scrollbarWidth = 'none'; 
-    scrollableDiv.style.overflow = '-ms-autohiding-scrollbar';
+        scrollableDiv.style.overflow = '-ms-autohiding-scrollbar';
     </script>
 </body>
 </html>

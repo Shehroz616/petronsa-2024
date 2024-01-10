@@ -11,6 +11,7 @@
     <header class="menu-header">
         <img src="img/petronas-logo-2.svg" class="petronas-logo" alt="petronas logo">
         <ul class="menu-items">
+            <li><a id="menu-close"><img src="img/close-icon.svg" alt=""></a></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="opportunities-on-offer.html">Opportunities on Offer</a></li>
             <li><a href="walk-of-fame.html">Walk of Fame</a></li>
@@ -21,19 +22,72 @@
             <li><a href="webinars.html">Webinars</a></li>
             <li><a href="mbr-online-portal.html">MBR Online Portal</a></li>
             <li><a href="mbr-information-counter.html">MBR Information Counter</a></li>
+            <div class="right-btns-2 right-btns-mobile">
+                <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+                <button>Logout</button>
+            </div>
         </ul>
-        <div class="right-btns">
+        <div class="right-btns-2">
             <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
             <button>Logout</button>
         </div>
+        <button class="ham-btn"><img src="img/menu-icon.svg" alt=""></button>
     </header>
     <main>
-        <img src="img/auditorium-bg.png" class="w-100" alt="">
+        <img src="img/auditorium-bg.png" class="w-100 d-lg-block d-none" alt="">
+        <img src="img/auditorium-bg-mobile.png" class="w-100 d-lg-none" alt="">
 
         <div class="ratio ratio-16x9 auditorium-video">
-            <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/zpOULjyy-n8" title="YouTube video" allowfullscreen></iframe>
         </div>
         <button class="agenda-btn" data-bs-toggle="modal" data-bs-target="#agendaModal">Agenda</button>
+        <div class="agenda-dropdown">
+            <button id="agenda-drp-btn">
+                <img src="img/agenda-icon.png" alt="">
+                <span>Agenda</span>
+                <img src="img/down-arrow.svg" class="ms-auto" alt="">
+            </button>
+            <div class="agenda-content">
+                <table class="agenda-table">
+                    <tr>
+                        <td>2:30 PM</td>
+                        <td>Opening Performance</td>
+                    </tr>
+                    <tr>
+                        <td>2:30 PM</td>
+                        <td>Event Montage</td>
+                    </tr>
+                    <tr>
+                        <td>2:30 PM</td>
+                        <td>Key-note Address   <br> by Ir. Mohamed Firouz Asnan, <br>Senior Vice President, <br>Malaysia Petroleum Management, PETRONAS</td>
+                    </tr>
+                    <tr>
+                        <td>2:30 PM</td>
+                        <td>Launch of MBR 2023</td>
+                    </tr>
+                    <tr>
+                        <td>2:30 PM</td>
+                        <td>Break</td>
+                    </tr>
+                    <tr>
+                        <td>2:30 PM</td>
+                        <td>MPM Investment Opportunities Presentation</td>
+                    </tr>
+                    <tr>
+                        <td>2:30 PM</td>
+                        <td>Networking Break & High-Tea</td>
+                    </tr>
+                    <tr>
+                        <td>2:30 PM</td>
+                        <td>Key Takeaways</td>
+                    </tr>
+                    <tr>
+                        <td>2:30 PM</td>
+                        <td>End of Event</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </main>
 
     <div class="modal fade custom-modal" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
@@ -106,5 +160,33 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/menu.js"></script>
+
+
+    <script>
+        let agendaDrpBtn = document.querySelector("#agenda-drp-btn")
+        let agendaContent = document.querySelector(".agenda-content")
+
+        let toggel = false
+        agendaDrpBtn.addEventListener("click",()=>{
+            if (toggel) {
+                agendaContent.style.height = "0px"
+                agendaContent.style.marginTop = "-35px"
+                setTimeout(() => {
+                    agendaContent.style.marginTop = "-25px"
+                }, 300);
+                toggel = false
+            }
+            else{
+                
+                agendaContent.style.height = agendaContent.scrollHeight+"px"
+                setTimeout(() => {
+                    agendaContent.style.marginTop = "0px"
+                }, 200);
+                toggel = true
+            }
+        })
+    </script>
+
 </body>
 </html>
