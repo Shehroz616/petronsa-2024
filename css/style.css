@@ -1019,7 +1019,7 @@ main {
     transition: opacity .3s;
 }
 .slider-popup{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
