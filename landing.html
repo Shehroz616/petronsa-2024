@@ -90,13 +90,44 @@
                                 <input type="password" placeholder="Password" class="custom-input">
                             </div>
                             <div class="mb-3 text-start">
-                                <a href="" class="forget-link">Forgot password? Click here to reset.</a>
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#thankuModal" class="forget-link">Forgot password? Click here to reset.</a>
                             </div>
                             <div class="mb-3">
                                 <button class="submit-btn">Submit</button>
                             </div>
 
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade custom-modal" id="resetModal" tabindex="-1" aria-labelledby="resetModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body">
+                        <h2 class="modal-heading">Reset Password</h2>
+                        <form action="">
+                            <div class="mb-3">
+                                <input type="password" placeholder="Password" class="custom-input">
+                            </div>
+                            <div class="mb-3">
+                                <button class="submit-btn">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade custom-modal" id="thankuModal" tabindex="-1" aria-labelledby="thankuModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body">
+                        <h2 class="modal-heading-2">Thank you for registering for MBR 2024!</h2>
+                        <p>You will receive a confirmation email shortly.</p>
                     </div>
                 </div>
             </div>

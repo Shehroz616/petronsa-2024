@@ -53,10 +53,26 @@
             </div>
         </div>
     </div>
+
+    <div class="announcment-popup">
+        <div class="announcment-container">
+            <p>Announcement</p>
+            <h4>MBR 2024 Launching in 30 minutes!</h4>
+            <a href="" class="aud-btn">Go to Auditorium <img src="img/arrow-3.svg" alt=""></a>
+        </div>
+    </div>
     
     
 
     <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.querySelector(".announcment-popup").style.top = "90px"
+            }, 2000);
+        });
+    </script>
     
 </body>
 </html>
